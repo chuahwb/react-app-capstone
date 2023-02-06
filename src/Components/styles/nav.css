@@ -8,4 +8,5 @@ ul {
 ul > li {
     padding-left: 1vw;
     padding-right: 1vw;
+    font-size: 1vw;
 }
