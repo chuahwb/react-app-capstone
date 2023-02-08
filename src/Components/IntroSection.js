@@ -1,8 +1,11 @@
 import React from 'react'
+import '../App.css'
 
 const IntroSection = () => {
   return (
-    <div>IntroSection</div>
+    <section id='intro'>
+      Intro
+    </section>
   )
 }
 

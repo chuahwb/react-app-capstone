@@ -1,8 +1,11 @@
 import React from 'react'
+import '../App.css'
 
 const MenuSection = () => {
   return (
-    <div>MenuSection</div>
+    <section id='menu'>
+      MenuSection
+    </section>
   )
 }
 

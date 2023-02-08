@@ -1,8 +1,11 @@
 import React from 'react'
+import '../App.css'
 
 const TestimonialSection = () => {
   return (
-    <div>TestimonialSection</div>
+    <section id='testimonial'>
+      TestimonialSection
+    </section>
   )
 }
 
