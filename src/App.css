@@ -1,33 +1,68 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Secondary4";
+  src: url(../public/fonts/Karla-ExtraBold.ttf);
+  font-style: normal;
+  font-size: large;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
   text-align: center;
+}
+
+.nav-logo {
+  margin: 1rem 0;
+  width: 12rem;
+}
+
+.nav {
+  background-color: #EDEFEE;
+  color: #333333;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem
+}
+
+.nav li{
+  color: inherit;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.nav li.active {
+  text-decoration: overline;
+}
+
+.nav .nav-item{
+  text-decoration: none;
+  font-family: 'Secondary4';
+  text-transform: uppercase;
+  color: #333333;
 }
 
 section {
   display: grid;
   place-items: center;
   height: 100vh;
-  font-size: 32px;
+  font-size: x-large;
   font-weight: bold;
-}
-
-.hero {
-  display: inline-flex;
-  padding: 2vh 0 2vh 0;
-  background-color: lightgray;
-  width: 100%;
-  justify-content: center;
-}
-
-.nav-item {
-  color: black;
-  display: inline;
-  padding: 20px 20px;
-  font-weight: 700;
-  font-size: large;
-  cursor: pointer;
-}
-
-.nav-item #link{
-  text-decoration: none;
-  color: black;
 }

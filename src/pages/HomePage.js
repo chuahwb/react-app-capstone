@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../components/Header'
 import IntroSection from '../components/IntroSection'
 import MenuSection from '../components/MenuSection'
 import TestimonialSection from '../components/TestimonialSection'
@@ -9,7 +8,6 @@ import Footer from '../components/Footer'
 const HomePage = () => {
   return (
     <>
-      <Header />
       <IntroSection />
       <MenuSection />
       <TestimonialSection />
