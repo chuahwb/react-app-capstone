@@ -1,19 +1,26 @@
 import React from 'react'
 import '../App.css'
+import { Link } from 'react-router-dom'
 
 const HeroSection = () => {
   return (
-    <section id='hero' className='hero'>
-      <div className='hero-content'>
-        <h1 className='hero-title'>Little Lemon</h1>
-        <h2 className='hero-subtitle'>Chicago</h2>
-        <h3 className='hero-description'>We are a family owned
-          Mediterranean restaurant,
-          focused on traditional
-          recipes served with a modern
-          twist.</h3>
+    <div className='wrapper'>
+      <div className='container grid grid-two-column'>
+        <div className='section-hero-data'>
+          <h1 className='hero-title'>Little Lemon</h1>
+          <h2 className='hero-subtitle'>Chicago</h2>
+          <p className='hero-para'>We are a family owned
+            Mediterranean restaurant,
+            focused on traditional
+            recipes served with a modern
+            twist.</p>
+        </div>
+        <button className='btn reserve-a-table-btn'>
+          <Link to="/reservations">Reserve a Table</Link>
+        </button>
+        <div className='section-hero-image'></div>
       </div>
-    </section>
+    </div>
   )
 }
 

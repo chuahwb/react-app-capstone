@@ -70,3 +70,31 @@ section {
   font-size: x-large;
   font-weight: bold;
 }
+
+button {
+  text-decoration: none;
+  max-width: auto;
+  background-color: #F4CE14;
+  border-radius: 16px;
+  font-family: "Secondary4";
+  border: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 1.4rem 2.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+
+button:hover, button:active {
+  transform: scale(0.96)
+}
+
+button a{
+  text-decoration: none;
+  font-size: medium;
+  color: #333333;
+}
