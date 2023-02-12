@@ -6,7 +6,6 @@
   font-family: "Secondary4";
   src: url(../public/fonts/Karla-ExtraBold.ttf);
   font-style: normal;
-  font-size: large;
 }
 
 body {
@@ -17,19 +16,24 @@ body {
   text-align: center;
 }
 
-.nav-logo {
-  margin: 1rem 0;
-  width: 12rem;
+.wrapper {
+  margin: 0 auto;
+  max-width: 67vw;
 }
 
 .nav {
   background-color: #EDEFEE;
   color: #333333;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: stretch;
-  gap: 2rem;
-  padding: 0 1rem;
+  margin: 0 auto;
+  padding: 0 16.5vw;
+}
+
+.nav-logo {
+  margin: 1rem 0;
+  width: 12rem;
 }
 
 .nav ul {
@@ -45,7 +49,6 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0.25rem;
 }
 
 .nav li.active {
@@ -55,6 +58,7 @@ body {
 .nav .nav-item{
   text-decoration: none;
   font-family: 'Secondary4';
+  font-size: smaller;
   text-transform: uppercase;
   color: #333333;
 }
