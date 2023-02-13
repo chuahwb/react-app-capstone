@@ -3,8 +3,26 @@
 }
 
 @font-face {
-  font-family: "Secondary4";
+  font-family: "Karla-800";
   src: url(../public/fonts/Karla-ExtraBold.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Karla-700";
+  src: url(../public/fonts/Karla-Bold.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Markazi-500";
+  src: url(../public/fonts/MarkaziText-Medium.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Markazi-400";
+  src: url(../public/fonts/MarkaziText-Regular.ttf);
   font-style: normal;
 }
 
@@ -13,7 +31,8 @@ body {
 }
 
 .container {
-  text-align: center;
+  margin: 0 auto;
+  max-width: 120rem;
 }
 
 .wrapper {
@@ -22,7 +41,7 @@ body {
 }
 
 .nav {
-  background-color: #EDEFEE;
+  background-color: #FFFFFF;
   color: #333333;
   display: flex;
   justify-content: space-between;
@@ -33,7 +52,8 @@ body {
 
 .nav-logo {
   margin: 1rem 0;
-  width: 12rem;
+  max-width: 12rem;
+  margin-right: 3rem;
 }
 
 .nav ul {
@@ -57,10 +77,21 @@ body {
 
 .nav .nav-item{
   text-decoration: none;
-  font-family: 'Secondary4';
-  font-size: smaller;
+  font-family: 'Karla-800';
   text-transform: uppercase;
   color: #333333;
+}
+
+@media screen and (max-width: 600px) {
+  .nav .nav-item {
+    font-size: x-small;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .nav .nav-item {
+      font-size: smaller;
+  }
 }
 
 section {
@@ -71,16 +102,71 @@ section {
   font-weight: bold;
 }
 
+.section-hero {
+  background-color: #495E57;
+  position: relative;
+}
+
+.section-hero-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0;
+  max-width: 30vw;
+}
+
+.hero-title {
+  font-family: 'Markazi-400';
+  color: #F4CE14;
+  font-size: 4rem;
+  line-height: 2rem;
+  margin: 0 0;
+}
+
+.hero-subtitle {
+  font-family: 'Markazi-400';
+  color: #EDEFEE;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin: 0 0;
+}
+
+.hero-para {
+  font-family: 'Karla-700';
+  color: #EDEFEE;
+  font-size: 1.125rem;
+  line-height: 1.48rem;
+  margin: 1rem 0;
+}
+
+.section-hero-image {
+  position: absolute;
+  top: 3rem;
+  right: 16.5vw;
+}
+
+picture {
+  text-align: center;
+}
+
+.hero-image {
+  width: 30vw;
+  max-height: 25rem;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
 button {
   text-decoration: none;
-  max-width: auto;
+  max-width: 12.5rem;
   background-color: #F4CE14;
   border-radius: 16px;
-  font-family: "Secondary4";
+  font-family: "Karla-700";
   border: none;
   text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 1.4rem 2.4rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -89,12 +175,23 @@ button {
   -o-transition: all 0.3s ease 0s;
 }
 
+button a {
+  text-decoration: none;
+  font-size: medium;
+  color: #333333;
+  transition: all 0.3s ease;
+}
+
 button:hover, button:active {
   transform: scale(0.96)
 }
 
-button a{
-  text-decoration: none;
-  font-size: medium;
-  color: #333333;
+button:active{
+  background-color: #333333;
 }
+
+button:active a {
+  color: #FFFFFF;
+}
+
+
