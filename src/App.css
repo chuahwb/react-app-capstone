@@ -15,6 +15,12 @@
 }
 
 @font-face {
+  font-family: "Karla-400";
+  src: url(../public/fonts/Karla-Regular.ttf);
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Markazi-500";
   src: url(../public/fonts/MarkaziText-Medium.ttf);
   font-style: normal;
@@ -229,7 +235,7 @@ button:active a {
 
 .section-menu-main {
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 @media screen and (min-width:801px) {
@@ -244,8 +250,61 @@ button:active a {
     }
 }
 
-.menu-main-item {
+.card-container {
+  overflow: hidden;
+  box-shadow: 0 0 15px -5px;
+  border-radius: 1rem;
+  background-color: #EDEFEE;
+}
+
+.image-container img {
+  overflow: hidden;
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 0 1rem;
+}
+
+.card-title {
   display: flex;
-  justify-content: center;
-  border: 1px solid black;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-heading {
+  font-family: "Markazi-400";
+  font-size: xx-large;
+  color: #333333;
+}
+
+.card-price {
+  font-family: "Karla-700";
+  font-size: x-large;
+  color: #EE9972;
+}
+
+.card-body {
+  font-family: "Karla-400";
+  font-size: large;
+  color: #333333;
+  min-height: 10vh;
+  overflow: visible;
+}
+
+.card-footer {
+  padding: 1rem 0;
+}
+
+.card-footer h3, .card-footer #icon-delivery {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #333333;
+}
+
+.card-footer h3 {
+  font-family: 'Karla-700';
+  font-size: large;
 }
