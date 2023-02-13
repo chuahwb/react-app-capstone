@@ -227,3 +227,25 @@ button:active a {
   margin: 0;
 }
 
+.section-menu-main {
+  display: grid;
+  gap: 2rem;
+}
+
+@media screen and (min-width:801px) {
+  .section-menu-main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width:800px) {
+  .section-menu-main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.menu-main-item {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}

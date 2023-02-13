@@ -1,8 +1,9 @@
 import React from 'react'
 import '../App.css'
 import { Link } from 'react-router-dom'
+import MenuItem from './MenuItem'
 
-const menuList = [
+const menu = [
   {
     name: "Greek Salad",
     price: "$12.99",
@@ -34,7 +35,14 @@ const MenuSection = () => {
           </button>
         </div>
         <div className='section-menu-main'>
-
+          {menu.map((item) => (
+            <MenuItem
+              key={item.name}
+              name={item.name}
+              price={item.price}
+              description={item.description}
+              imageSrc={item.getImgSrc()} />
+          ))}
         </div>
       </div>
     </div>
