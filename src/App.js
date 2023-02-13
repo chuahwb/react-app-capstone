@@ -1,7 +1,8 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage';
-import BookingPage from './pages/BookingPage';
+import ReservationsPage from './pages/ReservationsPage';
+import OrderPage from './pages/OrderPage';
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <div className='container'>
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/reservations' element={<BookingPage />} />
+          <Route path='/reservations' element={<ReservationsPage />} />
+          <Route path='/order-online' element={<OrderPage />} />
         </Routes>
       </div>
     </>

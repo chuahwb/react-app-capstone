@@ -35,9 +35,18 @@ body {
   max-width: 120rem;
 }
 
-.wrapper {
-  margin: 0 auto;
-  max-width: 67vw;
+@media screen and (max-width:600px) {
+  .wrapper {
+      margin: 0 auto;
+      max-width: 83vw;
+    }
+}
+
+@media screen and (min-width:601px) {
+  .wrapper {
+    margin: 0 auto;
+    max-width: 67vw;
+  }
 }
 
 .nav {
@@ -194,4 +203,27 @@ button:active a {
   color: #FFFFFF;
 }
 
+@media screen and (max-width:900px) {
+  .section-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 3rem 0;
+    }
+}
+
+@media screen and (min-width:901px) {
+  .section-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8rem 0;
+  }
+}
+
+.menu-title {
+  font-family: "Markazi-400";
+  font-size: 4rem;
+  margin: 0;
+}
 
