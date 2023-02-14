@@ -236,6 +236,7 @@ button:active a {
 .section-menu-main {
   display: grid;
   gap: 3rem;
+  padding-bottom: 3rem;
 }
 
 @media screen and (min-width:801px) {
@@ -307,4 +308,22 @@ button:active a {
 .card-footer h3 {
   font-family: 'Karla-700';
   font-size: large;
+}
+
+.section-testimonial {
+  background-color: #F4CE14;
+}
+
+.container-testimonial {
+  padding: 10vh 0;
+}
+
+.section-testimonial-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: "Markazi-400";
+  font-size: xx-large;
+  line-height: 0;
 }

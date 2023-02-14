@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
 import { Link } from 'react-router-dom'
-import Card from './Card'
+import CardMenu from './CardMenu'
 
 const menu = [
   {
@@ -36,7 +36,7 @@ const MenuSection = () => {
         </div>
         <div className='section-menu-main'>
           {menu.map((item) => (
-            <Card
+            <CardMenu
               name={item.name}
               price={item.price}
               description={item.description}

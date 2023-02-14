@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTruck } from '@fortawesome/free-solid-svg-icons'
 
-const Card = ({ name, price, description, imageSrc }) => {
+const CardMenu = ({ name, price, description, imageSrc }) => {
   return (
     <div className='card-container' key={name}>
       <div className='image-container'>
@@ -25,4 +25,4 @@ const Card = ({ name, price, description, imageSrc }) => {
   )
 }
 
-export default Card
+export default CardMenu
