@@ -18,7 +18,7 @@ const CardMenu = ({ name, price, description, imageSrc }) => {
         </div>
         <div className='card-footer'>
           <h3>Order a delivery</h3>
-          <FontAwesomeIcon icon={faTruck} id='icon-delivery'/>
+          <FontAwesomeIcon icon={faTruck} id='icon-delivery' />
         </div>
       </div>
     </div>

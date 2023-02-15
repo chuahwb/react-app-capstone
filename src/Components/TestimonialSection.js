@@ -49,13 +49,15 @@ const TestimonialSection = () => {
           <h2>Testimonials</h2>
         </div>
         <div className='section-testimonial-main'>
-          {testimonial.map((item) => (
-            <CardTestimonial 
-              name={item.name}
-              rating={item.rating}
-              review={item.review}
-              imgSrc={item.getImgSrc()}/>
-          ))}
+          <div id='slider' className='slider-testimonial'>
+            {testimonial.map((item) => (
+              <CardTestimonial
+                name={item.name}
+                rating={item.rating}
+                review={item.review}
+                imgSrc={item.getImgSrc()} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
