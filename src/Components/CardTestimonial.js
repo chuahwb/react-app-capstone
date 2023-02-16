@@ -4,7 +4,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 const CardTestimonial = ({ name, rating, review, imgSrc }) => {
   return (
-    <div className='card-testimonial' key={name}>
+    <div className='card-testimonial' >
       <div className='testimonial-header'>
         <p className='ratings'>{rating}</p>
         <FontAwesomeIcon icon={faStar} className='ratings-icon' />

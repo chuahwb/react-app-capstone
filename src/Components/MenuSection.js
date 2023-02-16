@@ -37,6 +37,7 @@ const MenuSection = () => {
         <div className='section-menu-main'>
           {menu.map((item) => (
             <CardMenu
+              key={item.name}
               name={item.name}
               price={item.price}
               description={item.description}

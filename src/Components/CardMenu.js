@@ -4,7 +4,7 @@ import { faTruck } from '@fortawesome/free-solid-svg-icons'
 
 const CardMenu = ({ name, price, description, imageSrc }) => {
   return (
-    <div className='card-container' key={name}>
+    <div className='card-container' >
       <div className='image-container'>
         <img src={imageSrc} alt={name} />
       </div>

@@ -341,6 +341,7 @@ button:active a {
   overflow-x: scroll;
   white-space: nowrap;
   scroll-behavior: smooth;
+  margin: 0 1rem;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -352,8 +353,42 @@ button:active a {
   display: inline-block;
   padding: 2rem;
   cursor: pointer;
+  background-color: #FFFFFF;
+  margin: 2rem;
+  width: 20dvw;
+  width: 20vw;
+  height: 40vh;
+  font-family: "Karla-700";
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  padding-left: 2.5vw;
+}
+
+.testimonial-header > * {
+  padding: 0 0.5rem;
+  font-size: larger;
+}
+
+.testimonial-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.testimonial-content > * {
+  flex-grow: 1;
+  flex-basis: 40%;
 }
 
 .testimonial-avatar {
-  width: 15vw;
+  width: 50%;
+  border-radius: 1rem;
+  border: #333333 solid;
+  overflow: cover;
 }
+
