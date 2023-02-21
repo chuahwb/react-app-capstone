@@ -349,46 +349,110 @@ button:active a {
   display: none;
 }
 
+
 .card-testimonial {
-  display: inline-block;
-  padding: 2rem;
-  cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
   background-color: #FFFFFF;
-  margin: 2rem;
-  width: 20dvw;
-  width: 20vw;
-  height: 40vh;
+  min-width: 20vw;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.ratings {
+  flex: 1 0 100%;
+  max-height: max-content;
+  width: 100%;
+  margin-left: 25%;
+  margin-bottom: 1rem;
+}
+
+.testimonial-ratings {
+  font-size: larger;
+  margin-right: 0.5rem;
   font-family: "Karla-700";
 }
 
-.testimonial-header {
-  display: flex;
-  align-items: center;
-  padding-left: 2.5vw;
-}
-
-.testimonial-header > * {
-  padding: 0 0.5rem;
-  font-size: larger;
-}
-
-.testimonial-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.testimonial-content > * {
-  flex-grow: 1;
-  flex-basis: 40%;
+.avatar {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  align-self: center;
 }
 
 .testimonial-avatar {
-  width: 50%;
-  border-radius: 1rem;
-  border: #333333 solid;
-  overflow: cover;
+  object-fit: cover;
+  object-position: center;
 }
 
+.testimonial-avatar-name {
+  overflow: hidden;
+  font-family: "Karla-400";
+  font-size: medium;
+}
+
+.testimonial-review {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 1.2;
+  white-space: normal;
+  font-family: "Karla-400";
+}
+
+.section-about {
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.section-about-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 8rem;
+  max-width: 40%;
+  padding: 8rem 0;
+}
+
+.section-about-main > h2 {
+  font-family: 'Markazi-400';
+  font-size: 4rem;
+  color: #F4CE14;
+  line-height: 1rem;
+  margin: 0;
+}
+
+.section-about-main> h3 {
+  font-family: 'Markazi-400';
+  font-size: 3rem;
+  color: #333333;
+  line-height: 5rem;
+  margin: 0;
+}
+
+.section-about-main > p {
+  font-family: 'Karla-400';
+  font-size: 1rem;
+  color: #333333;
+  margin-top: 3rem;
+}
+
+.section-about-main > img {
+  height: 20vw;
+  aspect-ratio: 2.5/3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem;
+}
+
+.chefA {
+  position: absolute;
+  right: 20vw;
+  top: 10vvh;
+}
+
+.chefB {
+  position: absolute;
+  right: 30vw;
+  top: 20vh;
+}
