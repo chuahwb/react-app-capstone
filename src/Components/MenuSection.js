@@ -26,7 +26,7 @@ const menu = [
 
 const MenuSection = () => {
   return (
-    <div className='section-menu' id='menu'>
+    <div className='section-menu' id='menu-section'>
       <div className='wrapper'>
         <div className='section-menu-header'>
           <h1 className='menu-title'>This weeks specials!</h1>

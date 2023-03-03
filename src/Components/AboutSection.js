@@ -5,7 +5,7 @@ import chefB from '../assets/restaurantchefB.jpg'
 
 const AboutSection = () => {
     return (
-        <div className='section-about' id='about'>
+        <div className='section-about' id='about-section'>
             <div className='wrapper'>
                 <div className='section-about-main'>
                     <h2>Little Lemon</h2>

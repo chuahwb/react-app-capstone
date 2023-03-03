@@ -12,7 +12,7 @@ const HomePage = () => {
       <MenuSection />
       <TestimonialSection />
       <AboutSection />
-      <Footer />
+      <Footer spa={false}/>
     </>
   )
 }

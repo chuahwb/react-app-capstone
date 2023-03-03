@@ -6,12 +6,22 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import CustomLink from './CustomLink';
 
-const Footer = () => {
+const Footer = (props) => {
+  const stylePos = {
+    position: "fixed",
+    bottom: "0",
+    left: "0",
+  }
+
+  const stylePad = {
+    padding: "1rem 0"
+  }
+
   return (
     <footer>
-      <div className='section-footer'>
+      <div className='section-footer' style={props.spa ? stylePos : {}}>
         <div className='wrapper'>
-          <div className='section-footer-main'>
+          <div className='section-footer-main' style={props.spa ? stylePad : {}}>
             <img src={logo} alt='footer logo' className='footer-logo' />
             <div className='footer-nav-category'>
               <h4 className='category-heading'>Doormat Navigations</h4>
