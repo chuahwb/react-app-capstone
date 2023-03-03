@@ -1,9 +1,12 @@
 import React from 'react'
+import ReservationSection from '../components/ReservationSection'
+import Footer from '../components/Footer'
 
 const ReservationsPage = () => {
   return (
     <>
-      <h1>Reservations Page</h1>
+      <ReservationSection />
+      <Footer spa={true} />
     </>
   )
 }
