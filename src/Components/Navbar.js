@@ -35,7 +35,6 @@ const Navbar = () => {
                 headerElement.style.transform = "translateY(-200px)";
             }
             prevScrollPos = currentScrollPos;
-            console.log(prevScrollPos)
         }
         window.addEventListener("scroll", handleScroll, { passive: true })
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { ACTION } from './ReservationSection'
@@ -13,7 +13,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
         initialValues: {
             fname: "",
             lname: "",
-            date: "",
+            date: minDate,
             time: "",
             people: 0,
             email: "",
@@ -36,6 +36,10 @@ const BookingForm = ({ availableTimes, dispatch }) => {
         })
     });
 
+    useEffect(() => {
+        dispatch({ type: ACTION.DATE_CHANGE, payload: formik.values });
+    }, [formik.values.date])
+
 
     return (
         <form className='reservation-form' onSubmit={formik.handleSubmit}>
@@ -45,6 +49,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
                         <label htmlFor='date'>Choose Date<sup>*</sup></label>
                         <input type='date' name='date' id='date' min={minDate}
                             {...formik.getFieldProps("date")}
+
                             style={formik.touched.date && formik.errors.date ? { borderColor: "red" } : {}} />
                         <div className='form-error-message'>{formik.touched.date && formik.errors.date}</div>
                     </div>
@@ -54,9 +59,17 @@ const BookingForm = ({ availableTimes, dispatch }) => {
                             {...formik.getFieldProps("time")}
                             style={formik.touched.time && formik.errors.time ? { borderColor: "red" } : {}} >
                             <option value="" disabled hidden>Select</option>
-                            {availableTimes.map((times, index) => (
-                                <option key={index} value={times}>{times}</option>
-                            ))}
+                            {
+                                availableTimes.map((dates) => {
+                                    if (dates.date === formik.values.date) {
+                                        return (
+                                            dates.time.map((times, index) => (
+                                                <option key={index} value={times}>{times}</option>
+                                            ))
+                                        )
+                                    }
+                                })
+                            }
                         </select>
                         <div className='form-error-message'>{formik.touched.time && formik.errors.time}</div>
                     </div>
