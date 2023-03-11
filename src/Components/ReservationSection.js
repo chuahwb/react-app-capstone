@@ -1,6 +1,7 @@
 import React from 'react'
 import BookingForm from './BookingForm'
 import { useReducer } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const seededRandom = function (seed) {
     var m = 2 ** 35 - 31;
@@ -31,7 +32,7 @@ const submitAPI = function (formData) {
 
 export const ACTION = {
     RESERVE: "reserve",
-    DATE_CHANGE: "date-change"
+    DATE_CHANGE: "date-change",
 }
 
 const updateTimes = (availableTimes, action) => {
@@ -77,13 +78,23 @@ const initializeTimes = (initialDate) => {
 const ReservationSection = () => {
     let initialDate = new Date();
     const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes(initialDate))
+    const navigate = useNavigate();
+
+    const submitForm = (formData) => {
+        navigate("/confirmation", {
+            state: {
+                formData: formData,
+                status: submitAPI(formData),
+            }
+        })
+    }
 
     return (
         <div className='section-reservation'>
             <div className='wrapper'>
                 <div className='container-reservation'>
                     <h2>Reservation</h2>
-                    <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+                    <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />
                 </div>
             </div>
         </div>

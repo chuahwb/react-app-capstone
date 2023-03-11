@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 const HomePage = lazy(() => import("./pages/HomePage"))
 const ReservationsPage = lazy(() => import("./pages/ReservationsPage"))
 const OrderPage = lazy(() => import("./pages/OrderPage"))
+const ConfirmedBookingPage = lazy(() => import("./pages/ConfirmedBookingPage"))
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='/reservations' element={<ReservationsPage />} />
             <Route path='/order-online' element={<OrderPage />} />
+            <Route path='/confirmation' element={<ConfirmedBookingPage />} />
           </Route>
         </Routes>
       </div>

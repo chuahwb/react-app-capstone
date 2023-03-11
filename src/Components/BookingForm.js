@@ -3,7 +3,7 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { ACTION } from './ReservationSection'
 
-const BookingForm = ({ availableTimes, dispatch }) => {
+const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
 
     const minDate = new Date().toISOString().split("T")[0];
 
@@ -21,9 +21,10 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             comment: "",
         },
         onSubmit: (values) => {
-            console.log(formik.values);
-            dispatch({ type: ACTION.RESERVE, payload: formik.values });
+            console.log(values);
+            dispatch({ type: ACTION.RESERVE, payload: values });
             formik.resetForm();
+            setTimeout(submitForm, 10, values);
         },
         validationSchema: Yup.object({
             fname: Yup.string().required("Required"),
