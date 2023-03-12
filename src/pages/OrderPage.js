@@ -1,9 +1,10 @@
 import React from 'react'
+import OrderOnline from '../components/OrderOnline'
 
 const OrderPage = () => {
   return (
     <>
-      <h1>Order Page</h1>
+      <OrderOnline />
     </>
   )
 }
