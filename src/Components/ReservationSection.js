@@ -2,6 +2,7 @@ import React from 'react'
 import BookingForm from './BookingForm'
 import { useReducer } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTimesContext } from '../context/timesContext'
 
 const seededRandom = function (seed) {
     var m = 2 ** 35 - 31;
@@ -53,15 +54,16 @@ const updateTimes = (availableTimes, action) => {
                 i++;
             }
             const selectedDate = new Date(action.payload.date);
-            const dateToAppend = initializeTimes(selectedDate);
+            const dateToAppend = createTimeList(selectedDate);
             availableTimes = availableTimes.concat(dateToAppend);
+            console.log(availableTimes)
             return availableTimes;
         default:
             return availableTimes;
     }
 }
 
-const initializeTimes = (initialDate) => {
+const createTimeList = (initialDate) => {
     let availableTimes = [
         {
             date: "",
@@ -76,15 +78,27 @@ const initializeTimes = (initialDate) => {
 }
 
 const ReservationSection = () => {
-    let initialDate = new Date();
-    const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes(initialDate))
+    const { timeSlot, onSave } = useTimesContext();
+
+    const initializeTimes = () => {
+        if (timeSlot === null) {
+            let initialDate = new Date();
+            return createTimeList(initialDate);
+        } else {
+            return timeSlot;
+        }
+    };
+
+    const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
     const navigate = useNavigate();
 
     const submitForm = (formData) => {
+        onSave(availableTimes);
         navigate("/confirmation", {
             state: {
                 formData: formData,
                 status: submitAPI(formData),
+                availableTimes: availableTimes,
             }
         })
     }
