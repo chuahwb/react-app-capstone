@@ -15,7 +15,7 @@ const HeroSection = () => {
             focused on traditional
             recipes served with a modern
             twist.</p>
-          <button className='btn reserve-a-table-btn'>
+          <button aria-label='reserve a table' className='btn reserve-a-table-btn'>
             <Link to="/reservations">Reserve a Table</Link>
           </button>
         </div>

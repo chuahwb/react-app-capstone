@@ -8,11 +8,13 @@ import Footer from '../components/Footer'
 const HomePage = () => {
   return (
     <>
-      <HeroSection />
-      <MenuSection />
-      <TestimonialSection />
-      <AboutSection />
-      <Footer spa={false}/>
+      <main>
+        <HeroSection />
+        <MenuSection />
+        <TestimonialSection />
+        <AboutSection />
+      </main>
+      <Footer spa={false} />
     </>
   )
 }

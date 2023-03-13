@@ -30,7 +30,7 @@ const MenuSection = () => {
       <div className='wrapper'>
         <div className='section-menu-header'>
           <h1 className='menu-title'>This weeks specials!</h1>
-          <button className='btn order-online-btn'>
+          <button aria-label='order online' className='btn order-online-btn'>
             <Link to="/order-online">Order Online</Link>
           </button>
         </div>

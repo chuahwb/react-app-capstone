@@ -61,7 +61,7 @@ const TestimonialSection = () => {
           <h2>Testimonials</h2>
         </div>
         <div className='section-testimonial-main'>
-          <button type='button' onClick={slideLeft}>
+          <button aria-label='slide left' type='button' onClick={slideLeft}>
             <FontAwesomeIcon icon={faCircleArrowLeft} size='2xl' />
           </button>
           <div id='slider' className='slider-testimonial'>
@@ -74,7 +74,7 @@ const TestimonialSection = () => {
                 imgSrc={item.getImgSrc()} />
             ))}
           </div>
-          <button type='button' onClick={slideRight}>
+          <button aria-label='slide right' type='button' onClick={slideRight}>
             <FontAwesomeIcon icon={faCircleArrowRight} size='2xl' />
           </button>
         </div>

@@ -5,7 +5,9 @@ import Footer from '../components/Footer'
 const ConfirmedBookingPage = () => {
     return (
         <>
-            <ConfirmedBooking />
+            <main>
+                <ConfirmedBooking />
+            </main>
             <Footer spa={true} />
         </>
     )

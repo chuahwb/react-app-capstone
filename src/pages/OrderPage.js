@@ -4,7 +4,9 @@ import OrderOnline from '../components/OrderOnline'
 const OrderPage = () => {
   return (
     <>
-      <OrderOnline />
+      <main>
+        <OrderOnline />
+      </main>
     </>
   )
 }

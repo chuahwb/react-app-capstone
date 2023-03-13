@@ -5,7 +5,9 @@ import Footer from '../components/Footer'
 const ReservationsPage = () => {
   return (
     <>
-      <ReservationSection />
+      <main>
+        <ReservationSection />
+      </main>
       <Footer spa={true} />
     </>
   )
